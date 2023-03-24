@@ -1,3 +1,5 @@
+import sys
+
 class Calculator():
 
     valid_ops = ["+", "-", "*", "/"]
@@ -35,7 +37,7 @@ class Calculator():
         if self.op not in Calculator.valid_ops:
             return False
         return True
-    
+
     def check_divide_by_zero(self):
         if not self.second['value']:
             return True
@@ -51,12 +53,15 @@ class Calculator():
             self.result = float(self.first['value'] * self.second['value'])
         elif self.op == "/":
             self.result = float(self.first['value'] / self.second['value'])
-        
+
         return self.result
 
 
 def main() -> None:
 
+    c = Calculator(1,'+',2)
+    help(c)
+    sys.exit()
     while True:
         data = input("Enter an equation")
         first, op, second = data.split()
