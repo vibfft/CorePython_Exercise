@@ -20,5 +20,5 @@ print(list(filter(lambda score: score > 50, scores)))
 def accumulator(acc, item):
     return acc + item
 scores.extend(my_numbers)
-print(reduce(accumulator, scores, 0))
+print(reduce(lambda acc,item: acc + item, scores, 0))
 
