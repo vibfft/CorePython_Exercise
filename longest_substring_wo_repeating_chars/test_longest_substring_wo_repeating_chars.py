@@ -2,7 +2,7 @@ from unittest import TestCase
 from longest_substring_wo_repeating_chars import length_of_longest_substring
 
 
-class Test(TestCase):
+class TestLongestSubstringWoRepeating(TestCase):
     def test_with_a_space(self):
         test_str = " "
         self.assertEqual(1, length_of_longest_substring(test_str), "test with a space")
