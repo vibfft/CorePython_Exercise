@@ -14,6 +14,7 @@
 # next(g)
 # next(g)
 # print(next(g))
+import pdb
 
 def fibonacci(num):
     a = 0
@@ -52,3 +53,5 @@ def fib_rec(number):
         
         
 print(fib_rec(10))
+
+help(pdb)

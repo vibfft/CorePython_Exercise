@@ -1,21 +1,3 @@
-# def checkDriverAge(age: str = 0) -> None:
-
-#     if int(age) < 18:
-#         print("Sorry, you are too young to drive this car. Powering off")
-#     elif int(age) > 18:
-#         print("Powering On. Enjoy the ride!")
-#     elif int(age) == 18:
-#         print("Congratulations on your first year of driving. Enjoy the ride!")
-
-
-# def main() -> None:
-
-#     checkDriverAge()
-
-
-# if __name__ == '__main__':
-#     main()
-
 #Rule: params, *args, default parameters, **kwargs
 
 class Cat:

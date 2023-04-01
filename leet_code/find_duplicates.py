@@ -9,5 +9,5 @@ for c in list_with_duplicates:
         uniq[c] = 1
     else:
         duplicates.append(c)
-        
+
 print(f"Duplicates are {duplicates}")
