@@ -49,7 +49,10 @@ class TwoSum:
                 return [comp_dict[item], i] 
 def main():
     s = TwoSum()
-    print(s.two_sum([7,11,2,15],9))
+    print(s.two_sum([],1))
+    print(s.two_sum([5],5))
+    print(s.two_sum([1,3,7,9,2],25))
+    print(s.two_sum([1,3,7,9,2],9))
     print(s.two_sum([3,2,4],6))
     
 if __name__ == '__main__':
