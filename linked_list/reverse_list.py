@@ -30,6 +30,16 @@ class LinkedList():
             current = current.next
             
 def reverse_list(head_of_list: LinkedList) -> LinkedList:
+       
+    # need three points
+    # prev: points to the new list, but initially None
+    # curr: points to the head of the current list
+    # next: points to the next item to the current time
+    # first point next ptr to curr.next
+    # second point curr.next ptr to prev (at first it's None)
+    # third point prev ptr to curr ptr
+    # lastly, point curr ptr to next
+    # and then ptr head_of_list.head to prev ptr
         
     prev = None  # points to the new reversed list
     curr = head_of_list.head
