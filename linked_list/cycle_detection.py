@@ -56,6 +56,54 @@ def detect_cycle(llst: LinkedList) -> bool:
             return True   
         current = current.next
     return False 
+
+def tortoise_hare(llst: LinkedList) -> bool:
+    t = llst.head  # increments by one
+    h = llst.head  # increments by two
+    
+    while True:
+        t = t.next
+        h = h.next
+        
+        if h == None or h.next == None:
+            return False
+        else:
+            h = h.next
+            
+        if t.data == h.data:
+            break
+    
+    print(f"t: {t.data}, h: {h.data}")  
+    return True
+    
+def cycle_point(llst: LinkedList) -> str:
+    
+    t = llst.head  # increments by one
+    h = llst.head  # increments by two
+    
+    while True:
+        t = t.next
+        h = h.next
+        
+        if h == None or h.next == None:
+            return False
+        else:
+            h = h.next
+            
+        if t.data == h.data:
+            break
+    
+    print(f"t: {t.data}, h: {h.data}") 
+    
+    p1 = llst.head
+    p2 = t
+    
+    while p1.data != p2.data:
+        print(f"p1: {p1.data}, p2: {p2.data}")
+        p1 = p1.next
+        p2 = p2.next
+        
+    return p1.data
         
 def main() -> None:
     
@@ -74,6 +122,12 @@ def main() -> None:
     print(f"\nis 'llst' linked-list cycle: {detect_cycle(llst)}")
     print(f"is 'cycle' linked-list cycle: {detect_cycle(cycle)}")
     
+    print("Tortoise Hare Algorithm")
+    print(f"\nis 'llst' linked-list cycle: {tortoise_hare(llst)}")
+    print(f"is 'cycle' linked-list cycle: {tortoise_hare(cycle)}")
+    
+    ptr_data = cycle_point(cycle)
+    print(f"cycle node: {ptr_data}")
 if __name__ == '__main__':
     main()
             
