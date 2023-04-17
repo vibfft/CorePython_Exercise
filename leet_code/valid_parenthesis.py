@@ -9,9 +9,10 @@ def valid_parenthesis(paren_str: str) -> bool:
 
     lst = list()
     paren_dict = {'}':'{', ')': '(', ']': '['}
-    close_paren = paren_dict.keys
-    open_paren = paren_dict.values
+    close_paren = paren_dict.keys()
+    open_paren = paren_dict.values()
 
+    print(f"paren: {close_paren}")
     if not paren_str:                  # empty string is True
         return True
     elif paren_str[0] in close_paren:  # starts with close paren e.g. }

@@ -1,0 +1,13 @@
+Thread: An entity within a process that can be scheduled 
+
+pros
+1. all threads within a process share the same memory
+2. lightweight
+3. starting a thread is faster than starting a process
+4. great for I/O bound tasks
+
+cons
+1. threading is limited by GIL: only one thread at a time
+2. no effect for CPU-bound tasks
+3. not interruptable/killable
+4. have to be careful with raced condition
