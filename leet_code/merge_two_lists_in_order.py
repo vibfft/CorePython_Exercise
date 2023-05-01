@@ -6,11 +6,8 @@ merged_list = []
 
 a = 0  # index for alist
 b = 0  # index for blist
-while True:
-
+while a < len(alist) - 1 or b < len(blist) - 1:
     print(f"index a: {a}, index b: {b}")
-    if a > len(alist) - 1 or b > len(blist) - 1:
-        break
 
     if alist[a] < blist[b]:
         merged_list.append(alist[a])
@@ -18,7 +15,8 @@ while True:
     elif alist[a] > blist[b]:
         merged_list.append(blist[b])
         b += 1
-    else:
+    else:                      
+        # values at indices a and b are equal
         merged_list.append(alist[a])
         merged_list.append(blist[b])
         a += 1
