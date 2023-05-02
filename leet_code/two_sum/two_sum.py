@@ -45,8 +45,9 @@ class TwoSum:
             if item not in comp_dict:
                 comp_dict[tmp_comp] = i
             else:
-                print(comp_dict)
+                # print(comp_dict)
                 return [comp_dict[item], i] 
+        return [-1,-1]
 def main():
     s = TwoSum()
     print(s.two_sum([],1))
