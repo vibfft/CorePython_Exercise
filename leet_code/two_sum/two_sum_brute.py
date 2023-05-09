@@ -1,5 +1,8 @@
 class NumberCalc(object):
-
+    #  0, 1, 2, 3, 4 <= indices
+    # [1, 3, 7, 9, 2]
+    #  pointer 1 at index 0 and goes up to index 3
+    #  pointer 2 at index 1 and goes up to index 4
     def two_sum(nums: list, target: int) -> list:
 
         for i in range(len(nums) - 1):  # pointer 1 cannot go past len(nums) - 2
