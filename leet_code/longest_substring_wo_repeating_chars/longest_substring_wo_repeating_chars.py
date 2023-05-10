@@ -32,10 +32,10 @@ def length_of_longest_substring(s: str) -> int:
     right = 0 # traverses the string till a repeat char is encountered
 
     index = 0  # this is for debugging
-    while left <= len(s) - 1:
+    while left < len(s) - 1:
         index += 1
         # if index == 10:
-        #    sys.exit(1)
+            # sys.exit(1)
 
         # print(f"s {s[left]}, index: {left}, seen_char: {seen_chars}, longest: {longest}")
         if s[right] not in seen_chars:
@@ -46,10 +46,10 @@ def length_of_longest_substring(s: str) -> int:
                 right += 1
                 # print(f"right index {right}")
         else:
+            left += 1
             seen_chars = []
             seen_chars.append(s[left])
-            left += 1
-            right = left
+            right = left + 1
             # print(f"after match => s {s[left]}, index: {left}, seen_char: {seen_chars}, longest: {longest}")
     return longest
 
