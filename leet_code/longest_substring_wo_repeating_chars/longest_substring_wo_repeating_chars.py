@@ -32,7 +32,7 @@ def length_of_longest_substring(s: str) -> int:
     right = 0 # traverses the string till a repeat char is encountered
 
     index = 0  # this is for debugging
-    while left < len(s) - 1:
+    while left <= len(s) - 1:
         index += 1
         # if index == 10:
         #    sys.exit(1)
@@ -42,8 +42,9 @@ def length_of_longest_substring(s: str) -> int:
             seen_chars.append(s[right])
             if len(seen_chars) > longest:
                 longest = len(seen_chars)
-            if right < len(s) - 1:
+            if right < len(s) - 1: # dvdf, f is at index 'len(s) - 1', right can't be equal to 'len(s) - 1'
                 right += 1
+                # print(f"right index {right}")
         else:
             seen_chars = []
             seen_chars.append(s[left])
