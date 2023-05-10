@@ -49,7 +49,7 @@ def length_of_longest_substring(s: str) -> int:
             left += 1
             seen_chars = []
             seen_chars.append(s[left])
-            right = left + 1
+            right = left + 1 # increment right index from the new left index base
             # print(f"after match => s {s[left]}, index: {left}, seen_char: {seen_chars}, longest: {longest}")
     return longest
 
