@@ -12,8 +12,8 @@ def sum_digits_iter(number):
     sum = 0
     while number > 0:
 
-        digits = number // 10
-        last_digit = number % 10
+        digits = number // 10 # 52, 5, 0
+        last_digit = number % 10 # 7, 2, 5
         number = digits
 
         print(f"last digit: {last_digit}")
@@ -22,7 +22,7 @@ def sum_digits_iter(number):
     return sum
     
 print(sum_digits_rec(1024))
-print(sum_digits_iter(1024))
+print(sum_digits_iter(527))
 
 # all: 102, last: 4
 # all: 10, last: 2
