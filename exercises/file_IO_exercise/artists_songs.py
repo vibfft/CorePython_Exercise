@@ -1,11 +1,13 @@
 class ArtistsSongs:
 
     def __init__(self, description: str) -> None:
+
         self.description = description
         self.artists_dict = {}
         self.songs_dict = {}
 
     def __str__(self) -> str:
+
         return f"{self.__class__}: {self.description}"
 
     def artists_reader(self, file_name: str) -> dict:
@@ -26,6 +28,7 @@ class ArtistsSongs:
         return self.artists_dict
 
     def songs_reader(self, file_name: str) -> dict:
+
         f = None
         try:
             f = open(file_name, 'r')
