@@ -52,7 +52,12 @@ def main() -> None:
     print(r_obj)
 
     r = RecordReader.file_reader("addr_data/addr_data.txt")
+    print(r['\"Joseph Biden\"'])
     print(r['\"Donald Trump\"'])
+    print(r['\"Barak Obama\"'])
+
+    for k, v in r.items():
+        print(f"{k} => {v}")
 
 
 if __name__ == '__main__':
