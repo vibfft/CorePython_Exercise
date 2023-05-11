@@ -3,10 +3,10 @@ class RecordReader:
     def __init__(self, description: str) -> None:
         self.description = description
 
-    def __str__(self) -> None:
+    def __str__(self) -> str:
         return f"{self.__class__}: {self.description}"
 
-    def file_reader(file_name: str) -> None:
+    def file_reader(file_name: str) -> dict:
 
         addr_hash = {}
 

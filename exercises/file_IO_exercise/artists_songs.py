@@ -5,10 +5,10 @@ class ArtistsSongs:
         self.artists_dict = {}
         self.songs_dict = {}
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"{self.__class__}: {self.description}"
 
-    def artists_reader(self, file_name: str):
+    def artists_reader(self, file_name: str) -> dict:
 
         f = None
         try:
@@ -25,7 +25,7 @@ class ArtistsSongs:
 
         return self.artists_dict
 
-    def songs_reader(self, file_name: str):
+    def songs_reader(self, file_name: str) -> dict:
         f = None
         try:
             f = open(file_name, 'r')
@@ -46,7 +46,7 @@ def main() -> None:
 
     a = ArtistsSongs("Lists a song for each artist")
     print(f"{a}")
-    
+
     artists_dict = a.artists_reader("artists_songs/artists.txt")
     songs_dict = a.songs_reader("artists_songs/songs.txt")
 
