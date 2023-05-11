@@ -52,7 +52,7 @@ def main() -> None:
 
     song_artist_list = []
     for song, id in songs_dict.items():
-        if str(songs_dict[song]) in artists_dict:
+        if songs_dict[song] in artists_dict:
             song_artist_list.append(
                 f"{song}: {artists_dict[songs_dict[song]]}")
 
