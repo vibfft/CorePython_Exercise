@@ -1,10 +1,10 @@
 class RecordReader:
 
-    def __init__(self, input_str: str) -> None:
-        self.input_str = input_str
+    def __init__(self, description: str) -> None:
+        self.description = description
 
     def __str__(self) -> None:
-        return f"{self.__class__}: {self.input_str}"
+        return f"{self.__class__}: {self.description}"
 
     def file_reader(file_name: str) -> None:
 
