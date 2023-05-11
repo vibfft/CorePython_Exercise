@@ -7,7 +7,7 @@ def binary_search(num_array: list, left: int, right: int, target: int) -> int:
         return 0
 
     else:
-        mid = (left + right - 1) // 2
+        mid = (left + right) // 2
         if num_array[mid] < target:
             binary_search(num_array, mid + 1, right, target)
         elif num_array[mid] > target:

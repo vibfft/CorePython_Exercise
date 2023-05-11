@@ -1,0 +1,20 @@
+"Joseph Biden"
+"1000 Washington Avenue"
+
+"Donald Trump"
+"2000 Washington Avenue"
+
+"Barak Obama"
+"3000 Washington Avenue"
+
+"Barak Obama"
+"1000 Chicago Avenue"
+
+"Joseph Biden"
+"1000 Delaware Avenue"
+
+"Donald Trump"
+"2000 Florida Avenue"
+
+"Donald Trump"
+"3000 New York Avenue"

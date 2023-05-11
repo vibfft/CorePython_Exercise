@@ -34,7 +34,7 @@ def reverse_list(head_of_list: LinkedList) -> LinkedList:
     ## need three pointers
     # prev: points to the new list, but initially None
     # curr: points to the head of the current list
-    # next: points to the next item to the current time
+    # next: points to the next item to the current list
     ## 
     # 1. point NEXT ptr to CURR.NEXT
     # 2. point CURR.NEXT ptr to PREV (at first it's None)

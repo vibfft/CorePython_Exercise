@@ -37,7 +37,7 @@ def type_out_strings(alist: str, blist: str) -> bool:
 
 def main():
 
-    type_out_strings("abc##c", "az#c")
+    type_out_strings("abc#c", "az#c")
 
 if __name__ == '__main__':
     main()
