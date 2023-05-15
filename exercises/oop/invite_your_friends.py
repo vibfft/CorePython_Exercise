@@ -1,4 +1,5 @@
 import sys
+import random
 
 invite_number = int(input("Enter the number of friends joining (including you):\n"))
 if invite_number <= 0:
@@ -19,7 +20,17 @@ if not (bill % invite_number):
 else:
     indiv_bill = float(bill/invite_number) 
 print(f"indiv bill: {indiv_bill}")
-friends_number = [round(indiv_bill,3)]*invite_number
+friends_number = [round(indiv_bill,2)]*invite_number
 
 friends_dict = dict(zip(friends_list, friends_number))
 print(friends_dict)
+
+yes_or_no = input('Do you want to use the "Who is lucky?" feature?  Write Yes/No\n> ')
+
+if yes_or_no.strip() == 'No':
+    print("No one is going to be lucky")
+else:
+    random_key = random.choice(list(friends_dict.keys()))
+    print(f"{random_key} is the lucky one!")
+    
+    
