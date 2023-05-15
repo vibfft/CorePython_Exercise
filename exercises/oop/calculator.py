@@ -60,8 +60,6 @@ class Calculator():
 def main() -> None:
 
     c = Calculator(1,'+',2)
-    help(c)
-    sys.exit()
     while True:
         data = input("Enter an equation")
         first, op, second = data.split()
