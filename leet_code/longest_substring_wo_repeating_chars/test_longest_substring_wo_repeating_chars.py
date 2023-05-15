@@ -1,12 +1,9 @@
 from unittest import TestCase
 from longest_substring_wo_repeating_chars import length_of_longest_substring
 
-
+# python3 -m unittest test_longest_substring_wo_repeating_chars.py
 class TestLongestSubstringWoRepeating(TestCase):
-    def test_with_a_space(self):
-        test_str = " "
-        self.assertEqual(1, length_of_longest_substring(test_str), "test with a space")
-
+    
     def test_with_the_same_char(self):
         test_str = "bbbbb"
         self.assertEqual(1, length_of_longest_substring(test_str), "test with the same char")

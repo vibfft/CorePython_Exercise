@@ -20,25 +20,43 @@
 #
 
 # first look for any repeat char
+import sys
+
+
 def length_of_longest_substring(s: str) -> int:
-    str_accumulator = ""
-    str_max = ""
-    for i, c in enumerate(s):
-        if c not in str_accumulator:
-            str_accumulator += c
+
+    # a b c b d c a
+    longest = 0
+    seen_chars = []
+    left = 0  # base pointer, only increments when a repeat char is encountered
+    right = 0 # traverses the string till a repeat char is encountered
+
+    index = 0  # this is for debugging
+    while left < len(s) - 1:
+        index += 1
+        # if index == 10:
+            # sys.exit(1)
+
+        # print(f"s {s[left]}, index: {left}, seen_char: {seen_chars}, longest: {longest}")
+        if s[right] not in seen_chars:
+            seen_chars.append(s[right])
+            if len(seen_chars) > longest:
+                longest = len(seen_chars)
+            if right < len(s) - 1: # dvdf, f is at index 'len(s) - 1', right can't be equal to 'len(s) - 1'
+                right += 1
+                # print(f"right index {right}")
         else:
-            str_accumulator = str_accumulator[str_accumulator.find(c) + 1:] + c
-            # print(f"inside str_acc: {str_accumulator}, str_max: {str_max}, char: {c}")
-        str_max = str_accumulator if len(str_accumulator) > len(str_max) else str_max
-        # print(f"str_acc: {str_accumulator}, str_max: {str_max}, char: {c}")
-    if len(str_max) == 0:
-        str_max = str_accumulator
-    return len(str_max)
+            left += 1
+            seen_chars = []
+            seen_chars.append(s[left])
+            right = left + 1 # increment right index from the new left index base
+            # print(f"after match => s {s[left]}, index: {left}, seen_char: {seen_chars}, longest: {longest}")
+    return longest
 
 
 def main():
-    # for s in ["dvdf", "nfpdmpi"]:
     for s in ["dvdf"]:
+        # for s in ["dvdf", "bbbbb", "abcabcbb", "pwwkew"]:
         print(length_of_longest_substring(s))
 
 

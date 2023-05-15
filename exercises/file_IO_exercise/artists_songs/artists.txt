@@ -1,0 +1,4 @@
+30, "New Jeans"
+10, "BLACKPINK"
+20, "BTS"
+40, "Taylor Swift"
