@@ -5,7 +5,7 @@ def type_out_strings(alist: str, blist: str) -> bool:
     b = 0
     new_alist = []
     new_blist = []
-    while a < len(alist) - 1 or b < len(blist) - 1:
+    while a <= len(alist) - 1 and b <= len(blist) - 1:
 
         print(f"list a: {new_alist} index: {a}")
         print(f"list b: {new_blist} index: {b}")
@@ -37,7 +37,8 @@ def type_out_strings(alist: str, blist: str) -> bool:
 
 def main():
 
-    type_out_strings("abc#c", "az#c")
+    print(type_out_strings("abc#c", "az#c"))
+    print(type_out_strings("ab#c", "az#c"))
 
 if __name__ == '__main__':
     main()

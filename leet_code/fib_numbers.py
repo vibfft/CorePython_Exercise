@@ -54,4 +54,16 @@ def fib_rec(number):
         
 print(fib_rec(10))
 
-help(pdb)
+def fib_value(number):
+    a = 0
+    b = 1
+    
+    for i in range(number):
+        temp = a
+        a = b
+        b = temp + b
+    
+    return b
+
+print(fib_value(3))
+        

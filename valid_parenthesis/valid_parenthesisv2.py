@@ -16,7 +16,7 @@ class ValidParenthesis(object):
                 # print(f"inside paren_stack: {paren_stack}")
                 if each_paren in open_paren:
                     paren_stack.append(each_paren)
-                elif each_paren in close_paren and paren_dict[each_paren] in paren_stack:
+                elif paren_dict[each_paren] in paren_stack:
                     paren_stack.pop()
                 else:
                     # print(f"before return paren_stack: {paren_stack}")

@@ -4,11 +4,13 @@ class MergeLists(object):
 
         a = 0
         b = 0
+        al = len(alist) - 1
+        bl = len(blist) - 1
         merged_list = []
 
         # if one of the lists break out, if one list is done
-        while a <= len(alist) - 1 and b <= len(blist) - 1:
-
+        while b <= bl and a <= al:
+            print(f"v3 after while: a => {a}, {al} b => {b}")
             if alist[a] < blist[b]:
                 merged_list.append(alist[a])
                 a += 1
@@ -23,7 +25,7 @@ class MergeLists(object):
                 b += 1
             print(f"Inside while loop: a {a}, b {b}")
 
-        print(f"v2 out of while loop: a {a}, b {b}")
+        print(f"out of while loop: a {a}, b {b}")
         print(f"out of while loop: merged_list {merged_list}")
         if a <= len(alist) - 1:
             merged_list.extend(alist[a:])

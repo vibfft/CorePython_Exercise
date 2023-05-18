@@ -6,7 +6,7 @@ merged_list = []
 
 a = 0  # index for alist
 b = 0  # index for blist
-while a < len(alist) - 1 or b < len(blist) - 1:
+while a <= len(alist) - 1 and b <= len(blist) - 1:
     print(f"index a: {a}, index b: {b}")
 
     if alist[a] < blist[b]:
@@ -24,7 +24,7 @@ while a < len(alist) - 1 or b < len(blist) - 1:
     print(f"interim merged_list: {merged_list}")
 
 print(
-    f"index a: {a}, index b: {b}, len of alist: {len(alist)}, len of blist: {len(blist)}")
+    f"v1 index a: {a}, index b: {b}, len of alist: {len(alist)}, len of blist: {len(blist)}")
 if a <= len(alist) - 1:
     # print(f"{alist[a:]}")
     merged_list.extend(alist[a:])

@@ -21,3 +21,15 @@ variable "web_subnet_name" {
 variable "my_public_ip" {
 
 }
+
+variable "aws_access_key" {
+  description = "AWS Access Key ID"
+  type        = string
+  default     = ""
+}
+
+variable "aws_secret_key" {
+  description = "AWS Secret Access Key"
+  type        = string
+  default     = ""
+}
