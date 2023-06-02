@@ -12,6 +12,7 @@ def canGetExactChange(targetMoney, denominations):
                 return True
             else:
                 if c < targetMoney:
+                    print(f"coin: {c}, target_money: {targetMoney}")
                     coin_list.remove(c)
                     return canGetExactChange(targetMoney - c, denominations)
         else:
@@ -20,4 +21,4 @@ def canGetExactChange(targetMoney, denominations):
 
 print(canGetExactChange(94, [5, 10, 25, 100, 200]))
 print(canGetExactChange(75, [4, 17, 29]))
-print(canGetExactChange(25, [5, 10, 25]))
+print(canGetExactChange(100, [5, 10, 25]))
